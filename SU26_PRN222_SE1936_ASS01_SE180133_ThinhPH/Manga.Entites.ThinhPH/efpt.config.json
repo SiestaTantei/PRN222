@@ -1,0 +1,122 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "MangaFlow_ProContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "IrregularWords": null,
+   "MinimumProductVersion": "2.6.1378",
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PluralRules": null,
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "Manga.Entites.ThinhPH",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "SingularRules": null,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[Category_Master]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Contract_Asset_ThinhPH]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Contract_Master_ThinhPH]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Manga_Chapter]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Manga_Series]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Manga_Statistics]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Manuscript_Annotation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Manuscript_Page]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Manuscript_Version]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Role]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Royalty_Payment_ThinhPH]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Series_Category_Map]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Series_Collection]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[System_UserAccount]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Task_Assignment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Task_Review]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Task_Submission]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[User_Activity_Log]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDatabaseNamesForRoutines": true,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseInternalAccessModifiersForSprocsAndFunctions": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false,
+   "UseT4Split": false,
+   "UseTypedTvpParameters": true
+}
