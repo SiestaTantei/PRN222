@@ -12,7 +12,7 @@ namespace Manga.Services.ThinhPH
     public class ContractMasterThinhPhService : Interface.IContractMasterThinhPhService
     {
         private readonly ContractMasterThinhPhRepository _repository;
-        public ContractMasterThinhPhService() { }
+        //public ContractMasterThinhPhService() { }
         public ContractMasterThinhPhService(ContractMasterThinhPhRepository repository) => _repository = repository;
 
         public async Task<int> CreateAsync(ContractMasterThinhPh orders)

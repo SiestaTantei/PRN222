@@ -1,6 +1,8 @@
+using Manga.Entites.ThinhPH.Models;
 using Manga.Repositories.ThinhPH;
 using Manga.Services.ThinhPH;
 using Manga.Services.ThinhPH.Interface;
+using Microsoft.EntityFrameworkCore;
 
 namespace Manga.WebMVCApp.ThinhPH
 {
@@ -13,6 +15,11 @@ namespace Manga.WebMVCApp.ThinhPH
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            builder.Services.AddDbContext<MangaFlow_ProContext>(options =>
+                options.UseSqlServer(connectionString));
+
+            builder.Services.AddScoped<ContractMasterThinhPhRepository>();
             // ??ng ký t?ng Service (B?t bu?c ph?i có dòng này ?? Controller nh?n di?n)
             builder.Services.AddScoped<IContractMasterThinhPhService, ContractMasterThinhPhService>();
             var app = builder.Build();
