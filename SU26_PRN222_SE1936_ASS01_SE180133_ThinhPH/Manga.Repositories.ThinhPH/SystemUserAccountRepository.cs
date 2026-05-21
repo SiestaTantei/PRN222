@@ -13,7 +13,10 @@ namespace Manga.Repositories.ThinhPH
     {
         public SystemUserAccountRepository() { }
         public SystemUserAccountRepository(MangaFlow_ProContext context) => _context = context;
-
+        public async Task<List<SystemUserAccount>> GetAllUsersAsync()
+        {
+            return await _context.SystemUserAccounts.ToListAsync();
+        }
         public async Task<SystemUserAccount> GetUserAsync(string userName, string password)
         {
             return await _context.SystemUserAccounts.FirstOrDefaultAsync(c => c.UserName == userName && c.Password == password)

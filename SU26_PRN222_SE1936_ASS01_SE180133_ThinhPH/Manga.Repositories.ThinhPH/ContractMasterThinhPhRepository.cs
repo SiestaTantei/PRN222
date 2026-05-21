@@ -13,13 +13,13 @@ namespace Manga.Repositories.ThinhPH
     {
         public ContractMasterThinhPhRepository() { }
         public ContractMasterThinhPhRepository(MangaFlow_ProContext context) => _context = context;
-        public async Task<List<Entites.ThinhPH.Models.ContractMasterThinhPh>> GetAllsAsync()
+        public async Task<List<ContractMasterThinhPh>> GetAllsAsync()
         {
             return await _context.ContractMasterThinhPhs
                 .Include(c => c.Series).Include(c => c.ContractAssetThinhPhs).Include(c => c.RoyaltyPaymentThinhPhs)
                 .ToListAsync();
         }
-        public async Task<ContractMasterThinhPh?> GetByIdAsync(int id)
+        public async Task<ContractMasterThinhPh?> GetByIdAsync(int? id)
         {
             return await _context.ContractMasterThinhPhs
                 .Include(c => c.Series).Include(c => c.ContractAssetThinhPhs).Include(c => c.RoyaltyPaymentThinhPhs)
@@ -36,5 +36,11 @@ namespace Manga.Repositories.ThinhPH
                     (!isExclusive.HasValue || c.IsExclusive == isExclusive.Value))
                 .ToListAsync();
         }
+        //public async ContractMasterThinhPh CreateAsync(ContractMasterThinhPh contract)
+        //{
+        //    _context.ContractMasterThinhPhs.Add(contract);
+        //    await _context.SaveChangesAsync();
+        //    return contract;
+        //}
     }
 }

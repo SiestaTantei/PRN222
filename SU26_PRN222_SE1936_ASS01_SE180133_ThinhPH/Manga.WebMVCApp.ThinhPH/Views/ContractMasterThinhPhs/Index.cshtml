@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Manga.Entites.ThinhPH.Models.ContractMasterThinhPh>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SignDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BaseRoyaltyRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractTerms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsExclusive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Series)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SignDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BaseRoyaltyRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractTerms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsExclusive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Series.Title)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ContractIdThinhPh">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ContractIdThinhPh">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ContractIdThinhPh">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

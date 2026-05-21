@@ -13,6 +13,11 @@ namespace Manga.Repositories.ThinhPH
     {
         public ContractAssetThinhPhRepository() { }
         public ContractAssetThinhPhRepository(MangaFlow_ProContext context) => _context = context;
+        public async Task<Entites.ThinhPH.Models.ContractAssetThinhPh> GetAllAssetsAsync()
+        {
+            return await _context.ContractAssetThinhPhs.FirstOrDefaultAsync() ?? new Entites.ThinhPH.Models.ContractAssetThinhPh();
+        }
+
         public async Task<List<Entites.ThinhPH.Models.ContractAssetThinhPh>> GetAssetsByContractIdAsync(int contractIdThinhPh)
         {
             return await _context.ContractAssetThinhPhs
