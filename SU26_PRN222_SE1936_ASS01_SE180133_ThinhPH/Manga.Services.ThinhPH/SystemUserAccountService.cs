@@ -9,7 +9,6 @@ namespace Manga.Services.ThinhPH
     public class SystemUserAccountService
     {
         private readonly Repositories.ThinhPH.SystemUserAccountRepository _repository;
-        public SystemUserAccountService() { }
         public SystemUserAccountService(Repositories.ThinhPH.SystemUserAccountRepository repository)
         {
             _repository = repository;

@@ -18,11 +18,10 @@ namespace Manga.Repositories.ThinhPH
             return await _context.ContractAssetThinhPhs.FirstOrDefaultAsync() ?? new Entites.ThinhPH.Models.ContractAssetThinhPh();
         }
 
-        public async Task<List<Entites.ThinhPH.Models.ContractAssetThinhPh>> GetAssetsByContractIdAsync(int contractIdThinhPh)
+        public async Task<Entites.ThinhPH.Models.ContractAssetThinhPh> GetAssetsByContractIdAsync(int? contractIdThinhPh)
         {
-            return await _context.ContractAssetThinhPhs
-                .Where(a => a.ContractIdThinhPh == contractIdThinhPh)
-                .ToListAsync();
+         return   await _context.ContractAssetThinhPhs
+                .FirstOrDefaultAsync(a => a.ContractIdThinhPh == contractIdThinhPh) ?? new Entites.ThinhPH.Models.ContractAssetThinhPh();
         }
     }
 }

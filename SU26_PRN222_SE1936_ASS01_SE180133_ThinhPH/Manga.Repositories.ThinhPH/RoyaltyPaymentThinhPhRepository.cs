@@ -12,15 +12,14 @@ namespace Manga.Repositories.ThinhPH
     {
         public RoyaltyPaymentThinhPhRepository() { }
         public RoyaltyPaymentThinhPhRepository(MangaFlow_ProContext context) => _context = context;
-        public async Task<Entites.ThinhPH.Models.RoyaltyPaymentThinhPh> GetAllPaymentAsync()
+        public async Task<List<Entites.ThinhPH.Models.RoyaltyPaymentThinhPh>> GetAllPaymentAsync()
         {
-            return await _context.RoyaltyPaymentThinhPhs.FirstOrDefaultAsync() ?? new Entites.ThinhPH.Models.RoyaltyPaymentThinhPh();
+           return await _context.RoyaltyPaymentThinhPhs.ToListAsync();
         }
-        public async Task<List<Entites.ThinhPH.Models.RoyaltyPaymentThinhPh>> GetPaymentsByContractIdAsync(int contractIdThinhPh)
+        public async Task<Entites.ThinhPH.Models.RoyaltyPaymentThinhPh> GetPaymentsByContractIdAsync(int? contractIdThinhPh)
         {
-            return await _context.RoyaltyPaymentThinhPhs
-                .Where(p => p.ContractIdThinhPh == contractIdThinhPh)
-                .ToListAsync();
+           return await _context.RoyaltyPaymentThinhPhs
+                .FirstOrDefaultAsync(p => p.ContractIdThinhPh == contractIdThinhPh) ?? new Entites.ThinhPH.Models.RoyaltyPaymentThinhPh();
         }
         public async Task<List<Entites.ThinhPH.Models.RoyaltyPaymentThinhPh>> GetPaymentsByDateRangeAsync(DateTime fromDate, DateTime toDate)
         {
