@@ -15,7 +15,15 @@ namespace Manga.Services.ThinhPH
 
         public async Task<int> CreateAsync(ContractAssetThinhPh asset)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _repository.CreateAsync(asset);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public async Task<ContractAssetThinhPh> GetAllAssetsAsync()

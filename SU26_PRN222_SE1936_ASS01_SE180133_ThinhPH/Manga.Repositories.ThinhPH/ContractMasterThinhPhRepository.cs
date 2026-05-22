@@ -6,12 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Manga.Repositories.ThinhPH.DBContext;
 
 namespace Manga.Repositories.ThinhPH
 {
     public class ContractMasterThinhPhRepository : GenericRepository<ContractMasterThinhPh>
     {
-        public ContractMasterThinhPhRepository() { }
         public ContractMasterThinhPhRepository(MangaFlow_ProContext context) => _context = context;
         public async Task<List<ContractMasterThinhPh>> GetAllsAsync()
         {

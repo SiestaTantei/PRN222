@@ -1,5 +1,6 @@
 ﻿using Manga.Entites.ThinhPH.Models;
 using Manga.Repositories.ThinhPH.Base;
+using Manga.Repositories.ThinhPH.DBContext;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
